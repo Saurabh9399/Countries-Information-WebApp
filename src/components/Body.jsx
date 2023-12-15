@@ -48,7 +48,10 @@ const Body = () => {
             label="Filter by Region"
             variant="outlined"
             value={regionFilter}
-            onChange={(e) => setRegionFilter(e.target.value)}
+            onChange={(e) => {
+              setSearchText("")
+              setRegionFilter(e.target.value)}
+            }
             sx={{ bgcolor: theme.palette.background.paper }} // Adjust background color
           >
             <MenuItem value="">All Regions</MenuItem>
