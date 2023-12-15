@@ -18,6 +18,10 @@ const CountryCard = () => {
     const borderCountry = data.find((c) => c.alpha3Code === code);
     return borderCountry ? borderCountry.name : '';
   };
+  const getCountryArea = (code) => {
+    const borderCountry = data.find((c) => c.alpha3Code === code);
+    return borderCountry ? borderCountry.area : '';
+  };
 
   return (
     <Container maxWidth="lg" sx={{ marginTop: 4 }}>
@@ -82,7 +86,7 @@ const CountryCard = () => {
               Border Countries:
             </Typography>
             {country[0]?.borders?.map((border) => (
-              <Button to={`/country[0]/${getCountryName(border)}`} key={border} as={Link} style={{ textDecoration: 'none' }}>
+              <Button to={`/country/${getCountryArea(border)}`} key={border} as={Link} style={{ textDecoration: 'none' }}>
                 {getCountryName(border)}
                 </Button>
             ))}

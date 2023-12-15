@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
 
-const regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
+const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 
 
 const Body = () => {
