@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import data from "../data.json";
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 const regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
 
@@ -65,6 +66,7 @@ const Body = () => {
           .filter((country) => country.name.toLowerCase().includes(searchText.toLowerCase()))
           .map((country) => (
             <Grid item xs={12} md={3} key={country.name}>
+            <Link to={`/country/${country.name}`}  style={{ textDecoration: 'none' }}>
               <Paper
                 elevation={3}
                 sx={{
@@ -92,6 +94,7 @@ const Body = () => {
                 <p style={{ margin: '0 0 4px 14px' }}>Region: {country.region}</p>
                 <p style={{ margin: '0 0 0 14px' }}>Capital: {country.capital}</p>
               </Paper>
+              </Link>
             </Grid>
           ))}
       </Grid>
@@ -100,3 +103,6 @@ const Body = () => {
 };
 
 export default Body;
+
+
+
