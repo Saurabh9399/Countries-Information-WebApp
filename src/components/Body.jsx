@@ -87,7 +87,7 @@ const Body = () => {
                 }}
               >
                 <img src={country.flags.svg} alt={`${country.name} Flag`} style={{ maxWidth: '100%', marginBottom: '12px' }} />
-                <h2 style={{ margin: '0 0 8px 14px' }}>{country.name}</h2>
+                <h2 style={{ margin: '0 8px 8px 14px' }}>{country.name}</h2>
                 <p style={{ margin: '0 0 4px 14px' }}>Population: {country.population}</p>
                 <p style={{ margin: '0 0 4px 14px' }}>Region: {country.region}</p>
                 <p style={{ margin: '0 0 0 14px' }}>Capital: {country.capital}</p>
