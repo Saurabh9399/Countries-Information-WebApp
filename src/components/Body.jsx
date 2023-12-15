@@ -66,7 +66,7 @@ const Body = () => {
           .filter((country) => country.name.toLowerCase().includes(searchText.toLowerCase()))
           .map((country) => (
             <Grid item xs={12} md={3} key={country.name}>
-            <Link to={`/country/${country.name}`}  style={{ textDecoration: 'none' }}>
+            <Link to={`/country/${country.area}`} key={country.name} style={{ textDecoration: 'none' }}>
               <Paper
                 elevation={3}
                 sx={{
